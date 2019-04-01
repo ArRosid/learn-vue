@@ -16,7 +16,7 @@
         <a v-bind:href="link">Google</a>
         <p v-html="link2"></p>
 
-        <button v-on:click="increase">Click me</button>
+        <button v-on:click="increase(2, $event)">Click me</button>
         <p>Counter: {{ counter }}</p>
 
         <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>

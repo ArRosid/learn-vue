@@ -14,8 +14,9 @@ new Vue({
             this.title = event.target.value;
         },
 
-        increase: function() {
-            this.counter++;
+        increase: function(step, e) {
+            console.log(e)
+            this.counter += step
         },
 
         updateCoordinates: function(e) {
