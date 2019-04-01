@@ -3,6 +3,7 @@ new Vue({
     data: {
         title: 'Hello world!',
         link: 'https://google.com',
+        link2: '<a href="https://google.com">Google 2</a>'
     },
     methods: {
         changeTitle: function(event) {
