@@ -26,8 +26,13 @@
             <span v-on:mousemove.stop="">Dead Spot 2</span>
         </p>
 
-
+        <label>Key Event (enter)</label>
         <input type="text" v-on:keyup.enter="allertMe">
+        <br><br>
+        <label>Two way binding</label>
+        <input type="text" v-model="name">
+        <p>{{ name }}</p>
+
     </div>
     <script src="main.js"></script>
 

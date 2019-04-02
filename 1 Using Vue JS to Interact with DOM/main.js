@@ -6,7 +6,8 @@ new Vue({
         link2: '<a href="https://google.com">Google 2</a>',
         counter: 0,
         x: 0,
-        y: 0
+        y: 0,
+        name: "Rosid"
     },
     methods: {
         changeTitle: function(event) {
