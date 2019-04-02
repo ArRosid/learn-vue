@@ -7,7 +7,8 @@ new Vue({
         counter: 0,
         x: 0,
         y: 0,
-        name: "Rosid"
+        name: "Rosid",
+        attachRed: false
     },
     methods: {
         changeTitle: function(event) {
@@ -32,6 +33,8 @@ new Vue({
         allertMe: function(e) {
             console.log(e);
             alert(e.target.value);
-        }
+        },
+
+
     }
 });

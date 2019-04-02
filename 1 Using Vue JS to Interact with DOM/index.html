@@ -6,7 +6,24 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="vue.js"></script>
-
+    <style type="text/css">
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            display: inline-block;
+            margin: 10px;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -15,7 +32,8 @@
         <p v-once>{{ title }}</p>
         <a v-bind:href="link">Google</a>
         <p v-html="link2"></p>
-
+        <!-- v-on bisa diganti @ -->
+        <!-- v-bind bisa diganti : -->
         <button v-on:click="increase(2, $event)">Click me</button>
         <p>Counter: {{ counter }}</p>
         <p>Counter: {{ counter > 10 ? "Greater than 10":"Lower than 10" }}</p>
@@ -33,6 +51,10 @@
         <input type="text" v-model="name">
         <p>{{ name }}</p>
 
+        <br><br><br>
+        <div class="demo" @click="attachRed = !attachRed" :class="{ red: attachRed }"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
     </div>
     <script src="main.js"></script>
 
