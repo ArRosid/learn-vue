@@ -26,7 +26,11 @@ new Vue({
 
         dummy: function(e) {
             e.stopPropagation();
-        }
+        },
 
+        allertMe: function(e) {
+            console.log(e);
+            alert(e.target.value);
+        }
     }
 });

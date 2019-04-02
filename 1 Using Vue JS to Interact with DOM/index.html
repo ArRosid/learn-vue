@@ -23,8 +23,10 @@
             Coordinates: {{ x }} / {{ y }}
             <span v-on:mousemove="dummy">Dead Spot</span>
             <span v-on:mousemove.stop="">Dead Spot 2</span>
-
         </p>
+
+
+        <input type="text" v-on:keyup.enter="allertMe">
     </div>
     <script src="main.js"></script>
 
