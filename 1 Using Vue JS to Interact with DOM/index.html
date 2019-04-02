@@ -19,7 +19,12 @@
         <button v-on:click="increase(2, $event)">Click me</button>
         <p>Counter: {{ counter }}</p>
 
-        <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+        <p v-on:mousemove="updateCoordinates">
+            Coordinates: {{ x }} / {{ y }}
+            <span v-on:mousemove="dummy">Dead Spot</span>
+            <span v-on:mousemove.stop="">Dead Spot 2</span>
+
+        </p>
     </div>
     <script src="main.js"></script>
 
