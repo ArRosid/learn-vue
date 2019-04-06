@@ -19,15 +19,27 @@
         <p v-else>Now you see me!</p>
         <p>Do you also see me?</p>
         <button @click="show = !show">Switch</button>
-        <br><br><br>
+        <hr>
 
         <ul>
             <li v-for="(ingredient, i) in ingredients">{{ i }}. {{ ingredient }}</li>
         </ul>
-
+        <hr>
         <template v-for="(ingredient, i) in ingredients">
             <h1>{{ i }} - {{ ingredient }}</h1>
         </template>
+        <hr>
+        
+        <ul v-for="person in persons">
+            <li>{{ person.name }}</li>
+        </ul>
+        
+        <hr>
+        <ul>
+            <li v-for="person in persons">
+                <div v-for="(value, key, index) in person">{{ index }} - {{key }} : {{ value }} </div>
+            </li>
+        </ul>
     </div>
     <script src="main.js"></script>
 
