@@ -12,25 +12,28 @@ new Vue({
             this.monsterHealth = 100
         },
         attack: function() {
-            this.monsterHealth -= this.calculateDamage(3,10);
-
-            if (this.checkWin()) {
-                return;
-            }
-
-            this.playerHealth -= this.calculateDamage(5,12);
-
-            this.checkWin();
-
+            this.monsterAttack(3,10);
+            this.playerAttack(5,12);
         },
         specialAttack: function() {
-
+            this.monsterAttack(10,20);
+            this.playerAttack(5,12);
         },
         heal: function() {
 
         },
         giveUp: function() {
 
+        },
+        playerAttack: function(min, max) {
+            this.playerHealth -= this.calculateDamage(min,max);
+            this.checkWin();
+        },
+        monsterAttack: function(min, max) {
+            this.monsterHealth -= this.calculateDamage(min, max);
+            if (this.checkWin()) {
+                return;
+            }
         },
         calculateDamage: function(min, max) {
             return Math.max(Math.floor(Math.random() * max) + 1, min);
