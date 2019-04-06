@@ -19,6 +19,11 @@
         <p v-else>Now you see me!</p>
         <p>Do you also see me?</p>
         <button @click="show = !show">Switch</button>
+        <br><br><br>
+
+        <ul>
+            <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+        </ul>
     </div>
     <script src="main.js"></script>
 
