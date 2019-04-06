@@ -24,6 +24,10 @@
         <ul>
             <li v-for="(ingredient, i) in ingredients">{{ i }}. {{ ingredient }}</li>
         </ul>
+
+        <template v-for="(ingredient, i) in ingredients">
+            <h1>{{ i }} - {{ ingredient }}</h1>
+        </template>
     </div>
     <script src="main.js"></script>
 
